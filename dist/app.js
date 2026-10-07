@@ -14,12 +14,28 @@
   };
   const text = {
     ru: {
-      home: "Главная", catalog: "Курсы", dashboard: "Мой кабинет", demo: "Демо-профиль",
+      home: "Главная", catalog: "Курсы", dashboard: "Мой кабинет", demo: "Мой кабинет",
+      signIn: "Войти", signUp: "Создать аккаунт", signOut: "Выйти", email: "Электронная почта", password: "Пароль",
+      confirmPassword: "Повторите пароль", forgotPassword: "Забыли пароль?", sendReset: "Отправить ссылку",
+      changePassword: "Сохранить новый пароль", backToLogin: "Вернуться ко входу", createAccount: "Зарегистрироваться",
+      authIntro: "Войдите, чтобы записываться на курсы и продолжать обучение на разных устройствах.",
+      registerIntro: "Создайте аккаунт, чтобы сохранять курсы и учебный прогресс.",
+      resetIntro: "Укажите почту, и мы отправим ссылку для сброса пароля.",
+      updateIntro: "Придумайте новый пароль для своего аккаунта.",
+      authRequired: "Войдите или создайте аккаунт, чтобы записаться на курс и сохранить прогресс.",
+      configMissing: "Вход временно не настроен. Администратору нужно подключить проект Supabase и добавить его ключи в настройки сайта.",
+      authError: "Не удалось выполнить запрос. Проверьте данные и попробуйте ещё раз.",
+      confirmSent: "Проверьте почту и подтвердите адрес, чтобы завершить регистрацию.",
+      resetSent: "Если такой аккаунт существует, на его почту отправлена ссылка для сброса пароля.",
+      passwordUpdated: "Пароль обновлён. Теперь войдите с новым паролем.",
+      passwordMismatch: "Пароли не совпадают.", passwordShort: "Пароль должен содержать не менее 8 символов.",
+      cloudNote: "Курсы и прогресс синхронизируются с вашим аккаунтом и доступны после входа.",
+      syncing: "Загружаем ваш прогресс…", syncError: "Не удалось синхронизировать прогресс. Попробуйте обновить страницу.",
       brand1: "Институт цифровизации", brand2: "и инноваций",
       eyebrow: "Институт цифровизации и инноваций",
       heroTitle: "Цифровые навыки для решений, которые меняют жизнь",
       heroText: "Демо-платформа для магистрантов и госслужащих. Изучайте цифровые инструменты, работайте с данными и проектируйте полезные сервисы.",
-      explore: "Выбрать курс", openCabinet: "Открыть демо-кабинет",
+      explore: "Выбрать курс", openCabinet: "Открыть кабинет",
       trackLabel: "Учебные направления", trackTitle: "Темы, которые помогают действовать",
       trackText: "Практика государственного сектора, исследования и современные цифровые навыки — в коротких программах.",
       allTracks: "Все направления", courseLabel: "Демо-программа", courseTitle: "Начните с конкретной задачи",
@@ -28,18 +44,18 @@
       howText: "Пройдите путь слушателя: от выбора курса до проверки знаний.",
       feature1Title: "Короткие уроки", feature1Text: "Понятные шаги, которые удобно изучать в своём темпе.",
       feature2Title: "Проверка знаний", feature2Text: "Короткий тест и обратная связь по результату в каждом курсе.",
-      feature3Title: "Ваш прогресс", feature3Text: "Курсы и отметки сохраняются в текущем браузере.",
+      feature3Title: "Ваш прогресс", feature3Text: "Прогресс синхронизируется с аккаунтом и доступен после входа.",
       promoTitle: "Найдите курс для своей задачи", promoText: "В каталоге есть темы для госслужбы, исследований и цифровых проектов.",
       catalogTitle: "Каталог курсов", catalogIntro: "Демо-программы для тех, кто исследует цифровые решения, работает с данными или меняет государственные услуги.",
       searchLabel: "Найти курс", searchPlaceholder: "Например, аналитика или сервис-дизайн",
       trackFilter: "Направление", audienceFilter: "Для кого", allAudiences: "Любая аудитория",
       allOptions: "Все направления", resultCount: "Найдено", emptyTitle: "По этим условиям курсов нет",
       emptyText: "Выберите другое направление или аудиторию.", resetFilters: "Сбросить фильтры",
-      dashboardTitle: "Мой демо-кабинет", dashboardIntro: "Здесь собраны курсы, на которые вы записались в этом браузере.",
+      dashboardTitle: "Мой кабинет", dashboardIntro: "Здесь собраны ваши курсы и результаты обучения.",
       enrolledCount: "Курсов в обучении", completedCount: "Завершено", myCourses: "Мои курсы",
       noCoursesTitle: "Вы пока не выбрали курс", noCoursesText: "Откройте каталог, выберите тему и запишитесь в один клик.",
-      courseBrowse: "Перейти в каталог", resetDemo: "Сбросить демо-прогресс",
-      localNote: "Открытая демонстрация без аккаунта. Курсы и прогресс хранятся только в текущем браузере и не отправляются на сервер.",
+      courseBrowse: "Перейти в каталог", resetDemo: "Удалить мой прогресс",
+      localNote: "Вы можете изучать каталог без входа. Для записи на курс и сохранения прогресса нужен аккаунт.",
       free: "Бесплатно", approx: "примерно", beginner: "Начальный уровень",
       outcomes: "После курса вы сможете", program: "Программа курса", demoLesson: "Короткий демо-урок",
       courseAccess: "Доступ к программе", modules: "тематических модуля", lesson: "урок и тест",
@@ -53,22 +69,38 @@
       quizNeedAnswers: "Ответьте на все вопросы, чтобы проверить результат.",
       toDashboard: "В демо-кабинет", demoLabel: "Демонстрационная программа",
       plan: "План курса", included: "Включено в демо",
-      clearConfirm: "Сбросить записанные курсы и прогресс в этом браузере?",
+      clearConfirm: "Удалить записанные курсы и прогресс этого аккаунта?",
       progress: "Прогресс", start: "Начать", resume: "Продолжить", completed: "Завершён",
       footerDemo: "Учебные программы и материалы — демонстрационные. Это макет учебного процесса, а не запись на официальное обучение.",
-      footerAccess: "Бесплатный демо-доступ", noAccount: "Без регистрации",
+      footerAccess: "Бесплатный демо-доступ", noAccount: "Регистрация по почте",
       courseNotFound: "Курс не найден", backHome: "На главную",
       resultPassed: "Минимальный порог достигнут.", resultRetry: "Порог пока не достигнут. Изучите материал и попробуйте снова.",
       practice: "Практика", previewLesson: "Предпросмотр урока",
       tracksCount: "демо-курса", skip: "Перейти к содержимому"
     },
     kk: {
-      home: "Басты бет", catalog: "Курстар", dashboard: "Жеке кабинетім", demo: "Демо-профиль",
+      home: "Басты бет", catalog: "Курстар", dashboard: "Жеке кабинетім", demo: "Жеке кабинетім",
+      signIn: "Кіру", signUp: "Аккаунт ашу", signOut: "Шығу", email: "Электрондық пошта", password: "Құпиясөз",
+      confirmPassword: "Құпиясөзді қайталаңыз", forgotPassword: "Құпиясөзді ұмыттыңыз ба?", sendReset: "Сілтемені жіберу",
+      changePassword: "Жаңа құпиясөзді сақтау", backToLogin: "Кіруге оралу", createAccount: "Тіркелу",
+      authIntro: "Курстарға жазылып, оқуды әртүрлі құрылғыларда жалғастыру үшін жүйеге кіріңіз.",
+      registerIntro: "Курстар мен оқу прогресін сақтау үшін аккаунт ашыңыз.",
+      resetIntro: "Поштаны енгізіңіз, құпиясөзді қалпына келтіру сілтемесін жібереміз.",
+      updateIntro: "Аккаунтыңызға жаңа құпиясөз ойлап табыңыз.",
+      authRequired: "Курсқа жазылып, прогресті сақтау үшін кіріңіз немесе аккаунт ашыңыз.",
+      configMissing: "Кіру уақытша бапталмаған. Әкімші Supabase жобасын қосып, сайт баптауларына оның кілттерін енгізуі керек.",
+      authError: "Сұрауды орындау мүмкін болмады. Деректерді тексеріп, қайталап көріңіз.",
+      confirmSent: "Поштаңызды тексеріп, тіркелуді аяқтау үшін мекенжайды растаңыз.",
+      resetSent: "Егер мұндай аккаунт бар болса, оған құпиясөзді өзгерту сілтемесі жіберілді.",
+      passwordUpdated: "Құпиясөз жаңартылды. Енді жаңа құпиясөзбен кіріңіз.",
+      passwordMismatch: "Құпиясөздер сәйкес емес.", passwordShort: "Құпиясөз кемінде 8 таңбадан тұруы керек.",
+      cloudNote: "Курстар мен прогресс аккаунтыңызбен синхрондалып, кіргеннен кейін қолжетімді болады.",
+      syncing: "Прогресіңіз жүктелуде…", syncError: "Прогресті синхрондау мүмкін болмады. Бетті жаңартып көріңіз.",
       brand1: "Цифрландыру және", brand2: "инновациялар институты",
       eyebrow: "Цифрландыру және инновациялар институты",
       heroTitle: "Өмірді өзгертетін шешімдерге арналған цифрлық дағдылар",
       heroText: "Магистранттар мен мемлекеттік қызметшілерге арналған демо-платформа. Цифрлық құралдарды меңгеріп, деректермен жұмыс істеп, пайдалы сервистерді жобалаңыз.",
-      explore: "Курс таңдау", openCabinet: "Демо-кабинетті ашу",
+      explore: "Курс таңдау", openCabinet: "Жеке кабинетті ашу",
       trackLabel: "Оқу бағыттары", trackTitle: "Әрекет етуге көмектесетін тақырыптар",
       trackText: "Мемлекеттік сектор тәжірибесі, зерттеулер және заманауи цифрлық дағдылар қысқа бағдарламаларда бірігеді.",
       allTracks: "Барлық бағыттар", courseLabel: "Демо-бағдарлама", courseTitle: "Нақты міндеттен бастаңыз",
@@ -77,18 +109,18 @@
       howText: "Тыңдаушының жолынан өтіңіз: курс таңдаудан бастап білімді тексеруге дейін.",
       feature1Title: "Қысқа сабақтар", feature1Text: "Өз қарқыныңызбен оқуға ыңғайлы түсінікті қадамдар.",
       feature2Title: "Білімді тексеру", feature2Text: "Әр курста қысқа тест және нәтиже бойынша кері байланыс бар.",
-      feature3Title: "Прогресіңіз", feature3Text: "Курстар мен белгілер осы браузерде сақталады.",
+      feature3Title: "Прогресіңіз", feature3Text: "Прогресс аккаунтпен синхрондалып, кіргеннен кейін қолжетімді болады.",
       promoTitle: "Міндетіңізге сай курсты табыңыз", promoText: "Каталогта мемлекеттік қызметке, зерттеулерге және цифрлық жобаларға арналған тақырыптар бар.",
       catalogTitle: "Курстар каталогы", catalogIntro: "Цифрлық шешімдерді зерттейтін, деректермен жұмыс істейтін немесе мемлекеттік қызметтерді өзгертетін адамдарға арналған демо-бағдарламалар.",
       searchLabel: "Курс іздеу", searchPlaceholder: "Мысалы, аналитика немесе сервис-дизайн",
       trackFilter: "Бағыт", audienceFilter: "Кімге арналған", allAudiences: "Кез келген аудитория",
       allOptions: "Барлық бағыттар", resultCount: "Табылды", emptyTitle: "Бұл шарттарға сай курс жоқ",
       emptyText: "Басқа бағытты немесе аудиторияны таңдап көріңіз.", resetFilters: "Сүзгілерді тазалау",
-      dashboardTitle: "Менің демо-кабинетім", dashboardIntro: "Мұнда осы браузерде тіркелген курстарыңыз көрсетіледі.",
+      dashboardTitle: "Жеке кабинетім", dashboardIntro: "Мұнда курстарыңыз бен оқу нәтижелеріңіз көрсетіледі.",
       enrolledCount: "Оқудағы курстар", completedCount: "Аяқталды", myCourses: "Менің курстарым",
       noCoursesTitle: "Сіз әлі курс таңдамадыңыз", noCoursesText: "Каталогты ашып, тақырып таңдап, бір рет басып жазылыңыз.",
-      courseBrowse: "Каталогқа өту", resetDemo: "Демо-прогресті тазалау",
-      localNote: "Бұл — аккаунтсыз ашық демо-нұсқа. Курстар мен прогресс тек осы браузерде сақталады және серверге жіберілмейді.",
+      courseBrowse: "Каталогқа өту", resetDemo: "Прогресті жою",
+      localNote: "Каталогты жүйеге кірмей қарай аласыз. Курсқа жазылу және прогресті сақтау үшін аккаунт қажет.",
       free: "Тегін", approx: "шамамен", beginner: "Бастапқы деңгей",
       outcomes: "Курстан кейін сіз", program: "Курс бағдарламасы", demoLesson: "Қысқа демо-сабақ",
       courseAccess: "Бағдарламаға қолжетімділік", modules: "тақырыптық модуль", lesson: "сабақ пен тест",
@@ -102,10 +134,10 @@
       quizNeedAnswers: "Нәтижені тексеру үшін барлық сұраққа жауап беріңіз.",
       toDashboard: "Демо-кабинетке", demoLabel: "Демонстрациялық бағдарлама",
       plan: "Курс жоспары", included: "Демоға кіреді",
-      clearConfirm: "Осы браузердегі курстар мен прогресті тазалайсыз ба?",
+      clearConfirm: "Осы аккаунттағы курстар мен прогресті жоясыз ба?",
       progress: "Прогресс", start: "Бастау", resume: "Жалғастыру", completed: "Аяқталды",
       footerDemo: "Оқу бағдарламалары мен материалдар демонстрациялық сипатта. Бұл — оқу процесінің макеті, ресми оқуға жазылу емес.",
-      footerAccess: "Тегін демо-қолжетімділік", noAccount: "Тіркелусіз",
+      footerAccess: "Тегін демо-қолжетімділік", noAccount: "Пошта арқылы тіркелу",
       courseNotFound: "Курс табылмады", backHome: "Басты бетке",
       resultPassed: "Ең төменгі шектен өттіңіз.", resultRetry: "Шекке әлі жеткен жоқсыз. Материалды оқып, қайта көріңіз.",
       practice: "Практика", previewLesson: "Сабақты алдын ала көру",
@@ -114,15 +146,26 @@
   };
 
   const STORAGE_KEY = "idi-learning-demo-v1";
+  const LANGUAGE_KEY = "idi-learning-language-v1";
   const emptyState = { language: "ru", enrolled: [], lessonsDone: [], quizzesPassed: [], quizScores: {} };
   let state = readState();
+  let guestSnapshot = copyState(state);
+  const supabaseConfig = window.IDI_SUPABASE_CONFIG || {};
+  const supabaseClient = window.supabase && supabaseConfig.url && supabaseConfig.key
+    ? window.supabase.createClient(supabaseConfig.url, supabaseConfig.key)
+    : null;
+  let currentUser = null;
+  let authBusy = false;
+  let recoveryMode = false;
+  let authReady = !supabaseClient;
+  let syncQueue = Promise.resolve();
   let pendingTrack = "";
   let toastTimer;
 
   function readState() {
     try {
-      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-      if (!saved || typeof saved !== "object") return Object.assign({}, emptyState);
+      let saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+      if (!saved || typeof saved !== "object") saved = {};
       const known = function (id) { return courses.some(function (course) { return course.id === id; }); };
       const scores = {};
       if (saved.quizScores && typeof saved.quizScores === "object") {
@@ -132,7 +175,7 @@
         });
       }
       return {
-        language: saved.language === "kk" ? "kk" : "ru",
+        language: (localStorage.getItem(LANGUAGE_KEY) || saved.language) === "kk" ? "kk" : "ru",
         enrolled: Array.isArray(saved.enrolled) ? saved.enrolled.filter(known) : [],
         lessonsDone: Array.isArray(saved.lessonsDone) ? saved.lessonsDone.filter(known) : [],
         quizzesPassed: Array.isArray(saved.quizzesPassed) ? saved.quizzesPassed.filter(known) : [],
@@ -141,7 +184,115 @@
     } catch (error) { return Object.assign({}, emptyState); }
   }
   function saveState() {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (error) { /* Keep this session usable when storage is blocked. */ }
+    try {
+      localStorage.setItem(LANGUAGE_KEY, state.language);
+      if (!currentUser) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        guestSnapshot = copyState(state);
+      }
+      else persistCloudProgress();
+    } catch (error) { /* Keep this session usable when storage is blocked. */ }
+  }
+  function copyState(source) {
+    return {
+      language: source.language,
+      enrolled: source.enrolled.slice(), lessonsDone: source.lessonsDone.slice(),
+      quizzesPassed: source.quizzesPassed.slice(), quizScores: Object.assign({}, source.quizScores)
+    };
+  }
+  function mergeCloudProgress(rows) {
+    const language = state.language;
+    state = copyState(guestSnapshot);
+    state.language = language;
+    (rows || []).forEach(function (row) {
+      const id = String(row.course_id || "");
+      if (!courseById(id) || !row.is_enrolled) return;
+      if (!has(state.enrolled, id)) state.enrolled.push(id);
+      if (row.lesson_completed && !has(state.lessonsDone, id)) state.lessonsDone.push(id);
+      const score = row.quiz_score == null ? -1 : Number(row.quiz_score);
+      if (Number.isInteger(score) && score >= 0 && score <= 3) state.quizScores[id] = Math.max(Number(state.quizScores[id] || 0), score);
+      if ((row.quiz_passed || score >= 2) && !has(state.quizzesPassed, id)) state.quizzesPassed.push(id);
+    });
+  }
+  function persistCloudProgress() {
+    if (!supabaseClient || !currentUser || !state.enrolled.length) return;
+    const userId = currentUser.id;
+    const records = state.enrolled.map(function (id) {
+      return { user_id: userId, course_id: id, is_enrolled: true,
+        lesson_completed: has(state.lessonsDone, id), quiz_passed: has(state.quizzesPassed, id),
+        quiz_score: Object.prototype.hasOwnProperty.call(state.quizScores, id) ? state.quizScores[id] : null };
+    });
+    syncQueue = syncQueue.then(function () {
+      if (!currentUser || currentUser.id !== userId) return null;
+      return supabaseClient.from("learning_progress").upsert(records, { onConflict: "user_id,course_id" });
+    }).then(function (result) {
+      if (result && result.error) { console.error("Progress sync failed", result.error); toast(T().syncError); }
+    }).catch(function (error) { console.error("Progress sync failed", error); toast(T().syncError); });
+  }
+  async function activateUser(user, restoreRoute) {
+    if (!user) return;
+    const changedUser = !currentUser || currentUser.id !== user.id;
+    currentUser = user;
+    if (changedUser) {
+      const result = await supabaseClient.from("learning_progress")
+        .select("course_id,is_enrolled,lesson_completed,quiz_passed,quiz_score").eq("user_id", user.id);
+      if (result.error) throw result.error;
+      mergeCloudProgress(result.data || []);
+      persistCloudProgress();
+    }
+    authReady = true;
+    render({ scroll: false });
+    if (restoreRoute) {
+      let target = "#/dashboard";
+      try { target = sessionStorage.getItem("idi-auth-return") || target; sessionStorage.removeItem("idi-auth-return"); } catch (error) { /* Use the dashboard as a safe default. */ }
+      const pending = target.match(/^#\/(enroll|complete)\/([^/]+)$/);
+      if (pending) {
+        let id = pending[2];
+        try { id = decodeURIComponent(id); } catch (error) { /* Keep the encoded route value. */ }
+        if (courseById(id)) {
+          if (!has(state.enrolled, id)) state.enrolled.push(id);
+          if (pending[1] === "complete" && !has(state.lessonsDone, id)) state.lessonsDone.push(id);
+          saveState();
+          target = pending[1] === "complete" ? "#/quiz/" + encodeURIComponent(id) : "#/course/" + encodeURIComponent(id);
+        }
+      }
+      if (target.indexOf("#/login") === 0 || target.indexOf("#/register") === 0 || target.indexOf("#/forgot-password") === 0) target = "#/dashboard";
+      if (target.indexOf("#/update-password") === 0) target = "#/dashboard";
+      window.location.hash = target;
+    }
+  }
+  function initializeAuth() {
+    if (!supabaseClient) { authReady = true; render(); return; }
+    supabaseClient.auth.onAuthStateChange(function (event, session) {
+      window.setTimeout(async function () {
+        try {
+          if (event === "PASSWORD_RECOVERY") {
+            recoveryMode = true;
+            currentUser = session && session.user || currentUser;
+            window.location.hash = "#/update-password";
+            render({ scroll: false });
+            return;
+          }
+          if (event === "SIGNED_OUT") {
+            currentUser = null;
+            state = readState(); guestSnapshot = copyState(state); recoveryMode = false; authReady = true;
+            render({ scroll: false });
+            return;
+          }
+          if (session && session.user) await activateUser(session.user, event === "SIGNED_IN");
+        } catch (error) {
+          console.error("Authentication initialization failed", error);
+          authReady = true; render({ scroll: false });
+        }
+      }, 0);
+    });
+    supabaseClient.auth.getSession().then(async function (result) {
+      if (result.error) throw result.error;
+      if (result.data.session && result.data.session.user) await activateUser(result.data.session.user, false);
+    }).catch(function (error) { console.error("Could not load session", error); }).finally(function () {
+      authReady = true; render({ scroll: false });
+    });
+    render();
   }
   function T() { return text[state.language]; }
   function current(course) { return course[state.language] || course.ru; }
@@ -158,7 +309,7 @@
     let id = parts[1] || "";
     try { id = decodeURIComponent(id); } catch (error) { /* Use the original route segment. */ }
     if (parts[0] === "catalog") return { page: "catalog" };
-    if (parts[0] === "dashboard") return { page: "dashboard" };
+    if (["dashboard", "login", "register", "forgot-password", "update-password"].indexOf(parts[0]) !== -1) return { page: parts[0] };
     if (["course", "lesson", "quiz"].indexOf(parts[0]) !== -1 && id) return { page: parts[0], id: id };
     return { page: "home" };
   }
@@ -181,7 +332,9 @@
       '</nav><div class="header-actions"><div class="locale-switch" role="group" aria-label="' + (state.language === "ru" ? "Язык" : "Тіл") + '">' +
       '<button class="locale-button' + (state.language === "ru" ? " active" : "") + '" data-action="language" data-value="ru" aria-pressed="' + (state.language === "ru") + '">RU</button>' +
       '<button class="locale-button' + (state.language === "kk" ? " active" : "") + '" data-action="language" data-value="kk" aria-pressed="' + (state.language === "kk") + '">KZ</button>' +
-      '</div><span class="demo-profile"><i class="profile-dot"></i>' + esc(T().demo) + '</span></div></div></header>';
+      '</div>' + (currentUser
+        ? '<span class="account-email" title="' + escAttr(currentUser.email || "") + '">' + esc(currentUser.email || T().demo) + '</span><button class="button button-secondary button-small auth-header-button" data-action="sign-out">' + esc(T().signOut) + '</button>'
+        : '<a class="button button-secondary button-small auth-header-button" href="#/login">' + esc(T().signIn) + '</a>') + '</div></div></header>';
   }
   function footer() {
     return '<footer class="site-footer"><div class="container footer-inner"><div><div class="footer-name">' + esc(T().eyebrow) +
@@ -256,7 +409,7 @@
       '</span><span class="summary-label">' + esc(T().enrolledCount) + '</span></div><div class="summary-item"><span class="summary-number">' + completed +
       '</span><span class="summary-label">' + esc(T().completedCount) + '</span></div></div></section><section class="dashboard-section"><h2>' + esc(T().myCourses) + '</h2>' +
       (enrolled.length ? '<div class="dashboard-grid">' + cards + '</div>' : '<div class="empty-dashboard"><h2>' + esc(T().noCoursesTitle) + '</h2><p>' + esc(T().noCoursesText) + '</p><a class="button button-primary button-small" href="#/catalog">' + esc(T().courseBrowse) + ' ↗</a></div>') +
-      '</section>' + localNote() + (enrolled.length ? '<button class="button button-secondary button-small" data-action="reset-progress">' + esc(T().resetDemo) + '</button>' : '') + '</div></main>';
+      '</section><div class="info-note"><span class="note-icon">i</span><span>' + esc(T().cloudNote) + '</span></div>' + (enrolled.length ? '<button class="button button-secondary button-small" data-action="reset-progress">' + esc(T().resetDemo) + '</button>' : '') + '</div></main>';
   }
   function coursePage(course) {
     const item = current(course);
@@ -319,12 +472,50 @@
   function missingPage() {
     return '<main id="main"><div class="container page-intro"><div class="eyebrow">' + esc(T().demoLabel) + '</div><h1>' + esc(T().courseNotFound) + '</h1><a class="button button-primary button-small" href="#/catalog">' + esc(T().backCatalog) + ' ↗</a></div></main>';
   }
+  function authPage(page) {
+    const configNotice = !supabaseClient ? '<div class="auth-notice" role="status">' + esc(T().configMissing) + '</div>' : '';
+    const message = '<div class="auth-message" id="auth-message" role="status" aria-live="polite"></div>';
+    let title = T().signIn;
+    let intro = T().authIntro;
+    let fields = '<label class="auth-field"><span>' + esc(T().email) + '</span><input name="email" type="email" autocomplete="email" required></label>';
+    let submit = T().signIn;
+    let links = '<p class="auth-links"><a href="#/forgot-password">' + esc(T().forgotPassword) + '</a><span>' + esc(T().authRequired) + '</span><a href="#/register">' + esc(T().createAccount) + '</a></p>';
+    if (page === "register") {
+      title = T().signUp; intro = T().registerIntro; submit = T().createAccount;
+      fields += '<label class="auth-field"><span>' + esc(T().password) + '</span><input name="password" type="password" autocomplete="new-password" minlength="8" required></label>' +
+        '<label class="auth-field"><span>' + esc(T().confirmPassword) + '</span><input name="passwordConfirm" type="password" autocomplete="new-password" minlength="8" required></label>';
+      links = '<p class="auth-links"><a href="#/login">' + esc(T().backToLogin) + '</a></p>';
+    } else if (page === "forgot-password") {
+      title = T().forgotPassword; intro = T().resetIntro; submit = T().sendReset;
+      links = '<p class="auth-links"><a href="#/login">' + esc(T().backToLogin) + '</a></p>';
+    } else if (page === "update-password") {
+      title = T().changePassword; intro = T().updateIntro; submit = T().changePassword;
+      fields = '<label class="auth-field"><span>' + esc(T().password) + '</span><input name="password" type="password" autocomplete="new-password" minlength="8" required></label>' +
+        '<label class="auth-field"><span>' + esc(T().confirmPassword) + '</span><input name="passwordConfirm" type="password" autocomplete="new-password" minlength="8" required></label>';
+      links = '<p class="auth-links"><a href="#/login">' + esc(T().backToLogin) + '</a></p>';
+    }
+    return '<main id="main"><div class="container auth-shell"><section class="auth-card"><div class="eyebrow">' + esc(T().eyebrow) + '</div><h1>' + esc(title) + '</h1><p class="auth-intro">' + esc(intro) + '</p>' + configNotice + message +
+      '<form class="auth-form" data-auth-form="' + escAttr(page) + '">' + fields + '<button class="button button-primary" type="submit"' + ((!supabaseClient || authBusy) ? ' disabled' : '') + '>' + esc(submit) + '</button></form>' + links + '</section></div></main>';
+  }
   function render(options) {
     const currentRoute = getRoute();
+    const protectedRoute = currentRoute.page === "dashboard" || currentRoute.page === "quiz";
+    if (protectedRoute && !authReady) currentRoute.page = "auth-loading";
+    else if (!currentUser && protectedRoute) {
+      try { sessionStorage.setItem("idi-auth-return", window.location.hash); } catch (error) { /* Optional route restoration. */ }
+      currentRoute.page = "login";
+      if (window.location.hash !== "#/login") window.location.hash = "#/login";
+    }
+    if (currentRoute.page === "update-password" && !recoveryMode && !currentUser) {
+      currentRoute.page = "login";
+      if (window.location.hash !== "#/login") window.location.hash = "#/login";
+    }
     let body;
     if (currentRoute.page === "home") body = homePage();
     else if (currentRoute.page === "catalog") body = catalogPage();
     else if (currentRoute.page === "dashboard") body = dashboardPage();
+    else if (currentRoute.page === "auth-loading") body = '<main id="main"><div class="container auth-shell"><section class="auth-card"><p class="auth-intro">' + esc(T().syncing) + '</p></section></div></main>';
+    else if (["login", "register", "forgot-password", "update-password"].indexOf(currentRoute.page) !== -1) body = authPage(currentRoute.page);
     else {
       const course = courseById(currentRoute.id);
       if (!course) body = missingPage();
@@ -376,6 +567,18 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { el.classList.remove("visible"); }, 2500);
   }
+  function showAuthMessage(form, message, isError) {
+    const el = form.querySelector("#auth-message");
+    if (!el) return;
+    el.textContent = message;
+    el.classList.toggle("error", !!isError);
+    el.classList.add("visible");
+  }
+  async function clearCloudProgress() {
+    if (!supabaseClient || !currentUser) return;
+    const result = await supabaseClient.from("learning_progress").delete().eq("user_id", currentUser.id);
+    if (result.error) { console.error("Could not clear cloud progress", result.error); toast(T().syncError); }
+  }
   const app = document.getElementById("app");
   app.addEventListener("click", function (event) {
     const jump = event.target.closest("[data-track-jump]");
@@ -388,19 +591,33 @@
       state.language = button.dataset.value === "kk" ? "kk" : "ru";
       saveState(); render({ scroll: false });
     } else if (action === "enroll" && courseById(id)) {
+      if (!currentUser) {
+        try { sessionStorage.setItem("idi-auth-return", "#/enroll/" + encodeURIComponent(id)); } catch (error) { /* Use dashboard as the default return route. */ }
+        window.location.hash = "#/login";
+        return;
+      }
       if (!has(state.enrolled, id)) state.enrolled.push(id);
       saveState(); render({ scroll: false }); toast(T().enrolled);
     } else if (action === "open-course-step" && courseById(id)) {
       window.location.hash = "#/" + (button.dataset.route || "lesson") + "/" + encodeURIComponent(id);
     } else if (action === "complete-lesson" && courseById(id)) {
+      if (!currentUser) {
+        try { sessionStorage.setItem("idi-auth-return", "#/complete/" + encodeURIComponent(id)); } catch (error) { /* Use dashboard as the default return route. */ }
+        window.location.hash = "#/login";
+        return;
+      }
       if (!has(state.enrolled, id)) state.enrolled.push(id);
       if (!has(state.lessonsDone, id)) state.lessonsDone.push(id);
       saveState(); window.location.hash = "#/quiz/" + encodeURIComponent(id);
     } else if (action === "reset-progress") {
       if (window.confirm(T().clearConfirm)) {
         state.enrolled = []; state.lessonsDone = []; state.quizzesPassed = []; state.quizScores = {};
-        saveState(); render({ scroll: false }); toast(T().resetDemo);
+        saveState(); clearCloudProgress(); render({ scroll: false }); toast(T().resetDemo);
       }
+    } else if (action === "sign-out" && supabaseClient) {
+      supabaseClient.auth.signOut().then(function (result) {
+        if (result.error) { console.error("Sign out failed", result.error); toast(T().authError); }
+      });
     } else if (action === "reset-filters") {
       const search = document.getElementById("course-search");
       const track = document.getElementById("track-filter");
@@ -412,6 +629,55 @@
     }
   });
   app.addEventListener("submit", function (event) {
+    const authForm = event.target.closest("[data-auth-form]");
+    if (authForm) {
+      event.preventDefault();
+      if (!supabaseClient || authBusy) return;
+      const values = new FormData(authForm);
+      const page = authForm.dataset.authForm;
+      const email = String(values.get("email") || "").trim();
+      const password = String(values.get("password") || "");
+      const confirmPassword = String(values.get("passwordConfirm") || "");
+      if ((page === "register" || page === "update-password") && password.length < 8) { showAuthMessage(authForm, T().passwordShort, true); return; }
+      if ((page === "register" || page === "update-password") && password !== confirmPassword) { showAuthMessage(authForm, T().passwordMismatch, true); return; }
+      const submit = authForm.querySelector('button[type="submit"]');
+      authBusy = true; if (submit) submit.disabled = true;
+      (async function () {
+        try {
+          let result;
+          if (page === "login") {
+            result = await supabaseClient.auth.signInWithPassword({ email: email, password: password });
+            if (result.error) throw result.error;
+            if (!result.data.user) throw new Error("No user returned from sign in.");
+            await activateUser(result.data.user, true);
+          } else if (page === "register") {
+            result = await supabaseClient.auth.signUp({ email: email, password: password, options: {
+              emailRedirectTo: window.location.origin + window.location.pathname + "?auth=confirm"
+            } });
+            if (result.error) throw result.error;
+            if (result.data.session && result.data.user) await activateUser(result.data.user, true);
+            else showAuthMessage(authForm, T().confirmSent, false);
+          } else if (page === "forgot-password") {
+            result = await supabaseClient.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin + window.location.pathname + "?auth=recovery" });
+            if (result.error) throw result.error;
+            showAuthMessage(authForm, T().resetSent, false);
+          } else if (page === "update-password") {
+            result = await supabaseClient.auth.updateUser({ password: password });
+            if (result.error) throw result.error;
+            recoveryMode = false;
+            showAuthMessage(authForm, T().passwordUpdated, false);
+            window.setTimeout(function () { window.location.hash = "#/login"; }, 1200);
+          }
+        } catch (error) {
+          console.error("Authentication request failed", error);
+          showAuthMessage(authForm, (error && error.message && error.message.length < 180) ? error.message : T().authError, true);
+        } finally {
+          authBusy = false;
+          if (submit && document.body.contains(submit)) submit.disabled = false;
+        }
+      })();
+      return;
+    }
     const form = event.target.closest("[data-quiz-course]");
     if (!form) return;
     event.preventDefault();
@@ -426,6 +692,7 @@
     }
     if (error) error.classList.remove("visible");
     const right = current(course).quiz.reduce(function (total, question, index) { return total + (answers[index] === question.answer ? 1 : 0); }, 0);
+    if (!has(state.enrolled, id)) state.enrolled.push(id);
     const oldBest = Number(state.quizScores[id] || 0);
     state.quizScores[id] = Math.max(oldBest, right);
     if (right >= 2 && !has(state.quizzesPassed, id)) state.quizzesPassed.push(id);
@@ -434,5 +701,5 @@
     if (result) result.scrollIntoView({ behavior: "smooth", block: "center" });
   });
   window.addEventListener("hashchange", function () { render(); });
-  render();
+  initializeAuth();
 })();
